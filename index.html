@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE MET SB</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo-1.png" alt="IEEE Logo" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Committees</a></li>
+        <li><a href="#">Chapter</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <div class="nav-button">
+        <a href="#">Recruiting</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <img src="img/logo-2.png" alt="IEEE Logo" class="hero-logo" />
+      <!-- <h1>IEEE MET<br><span>Student Branch</span></h1> -->
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <!-- <img src="img/logo-1.png" alt="Section Image" /> -->
+    <div class="content-text">
+      <h2>Who Are We ?</h2>
+      <p>
+        IEEE MET Student Branch is a group of creative students passionate about technology, development, and
+        innovation. Join us and be part of the future.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i>ali.abdelnaser@ieee.org </p>
+        <p><i class="fas fa-phone"></i> +20 1068643407</p>
+        <p><i class="fas fa-location-dot"></i> Mansoura , Egypt </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#">About Us</a>
+        <a href="#">Events</a>
+        <a href="#">Membership</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61560937966305" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/ieeemetsb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D"
+            target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/ieee-met-sb-pioneers/" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.tiktok.com/@ieee.met?_t=ZS-8twBiSCiSgB&_r=1" target="_blank" aria-label="TikTok"><i
+              class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/201068643407" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:ali.abdelnaser@ieee.org" target="_blank" class="email-float" aria-label="Send Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 IEEE MET SB. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <!-- Script -->
+  <script>
+    const header = document.querySelector("header");
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+
+</html>
