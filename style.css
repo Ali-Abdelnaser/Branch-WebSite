@@ -24,7 +24,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("img/collage.jpg") center center / cover no-repeat;
+  background: url("img/collage.png") center center / cover no-repeat;
   background-attachment: fixed;
   z-index: -2;
 }
@@ -200,27 +200,35 @@ header.scrolled .menu-toggle {
 
 
 
+footer {
+  margin-top: auto;
+}
+
 .footer {
   background-color: var(--accent-color);
   color: white;
-  padding: 60px 20px 30px;
+  padding: 40px 20px 20px;
   font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
 .footer-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 200px;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .footer-column {
-  flex: 0 0 auto;
-  min-width: 200px;
+  min-width: 220px;
+  text-align: left;
 }
 
 .footer-column h3 {
@@ -234,20 +242,21 @@ header.scrolled .menu-toggle {
   color: white;
   text-decoration: none;
   display: block;
-  transition: 0.3s;
 }
 
 .footer-column a:hover {
   text-decoration: underline;
 }
 
-.footer-column i {
-  margin-right: 8px;
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .social-icons a {
-  font-size: 18px;
-  margin-right: 15px;
+  font-size: 20px;
   color: white;
   transition: color 0.3s;
 }
@@ -257,15 +266,27 @@ header.scrolled .menu-toggle {
 }
 
 .footer-bottom {
-  text-align: center;
-  padding-top: 25px;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
   font-size: 0.85rem;
   color: #eee;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
 
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
 
 /* Cycles */
 .cycles-section {
@@ -316,7 +337,133 @@ header.scrolled .menu-toggle {
   line-height: 1.5;
 }
 
+a{
+  text-decoration: none;
+}
 
+/* OUR EVENT */
+.carousel-events-section {
+  padding: 80px 20px;
+  background-color: #f4f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-events-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 10px;
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+body.no-hero::before,
+body.no-hero::after {
+  display: none;
+}
+
+.event-card {
+  flex: 0 0 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  scroll-snap-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.event-card h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.event-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.event-btn:hover {
+  background-color: #005a95;
+}
+
+.carousel-indicators {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-card {
+    padding: 20px 15px;
+  }
+
+  .event-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .event-card img {
+    height: 200px;
+  }
+
+  .event-card p {
+    font-size: 0.95rem;
+  }
+}
 
 
 
